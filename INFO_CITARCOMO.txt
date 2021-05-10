@@ -1,0 +1,42 @@
+INFO:
+Rede Viária fornecida pela Câmara Municipal de Lisboa, em 2012, e limpa por Rosa Félix.
+Altimetria calculada a partir de um raster com 10x10m de definição, de um projecto IST.
+
+INSTRUÇÕES:
+Usar campo "DecliveAbs", que equivale ao declive em termos absolutos, em percentagem.
+A shape não está projectada, e está em WGS84.
+
+CITAR COMO:
+Félix, R., 2012. Gestão da Mobilidade em Bicicleta - Necessidades, factores de preferência e
+ferramentas de suporte ao planeamento e gestão de redes: o caso de Lisboa. MSc Thesis in
+Territorial Engineering. Instituto Superior Técnico, Universidade de Lisboa.
+
+https://scholar.google.com/scholar?cluster=13629394170312179823&hl=en&oi=scholarr
+
+
+DETALHES:
+Os declives foram calculados nos dois sentidos das vias, porque na altura precisava para cálculo de percursos. Ou seja, a mesma rua pode ter 5% de inclinação a subir, mas terá -5% a descer.
+O campo que deverá usar é o dec_FT ou dec_TF (from-to e to-from)
+Mas na realidade, se fizer o absoluto de qualquer um desses valores, chega ao mesmo resultado:
+DecliveAbs = abs(dec_FT)
+O declive é calculado por 100*(z1-z0)/lenght , ou seja, a cota do ponto final, menos a cota do ponto inicial, sobre a distância do segmento, (x100 para a percentagem)
+
+
+Estatísticas descritivas do 'DecliveAbs', abrindo a shapefile no QGIS - software open source.
+
+Count: 24927
+Unique values: 9464
+NULL (missing) values: 0
+Minimum value: 0.0
+Maximum value: 71.083
+Range: 71.083
+Sum: 99066.19999999946
+Mean value: 3.974252818229208
+Median value: 2.614
+Standard deviation: 4.629828492214593
+Coefficient of Variation: 1.164955704624118
+Minority (rarest occurring value): 0.27
+Majority (most frequently occurring value): 0.0
+First quartile: 0.931
+Third quartile: 5.3385
+Interquartile Range (IQR): 4.4075
